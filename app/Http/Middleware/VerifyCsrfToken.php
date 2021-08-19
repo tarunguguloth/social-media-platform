@@ -12,6 +12,10 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //
+        'http://localhost:8000/create_user',
+        'http://localhost:8000/create_post/*',
+        'http://localhost:8000/write_comment/*',
+        'http://localhost:8000/get_posts/*',
+        'http://localhost:8000/get_comments/*'
     ];
 }

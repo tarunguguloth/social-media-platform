@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::post('/create_user',[UsersController::class, 'createUser']);
+Route::post('/create_post/{user_id}',[UsersController::class, 'createPost']);
+Route::post('/write_comment/{user_id}/{post_id}',[UsersController::class, 'writeComment']);
+Route::get('/get_posts/{user_id}', [UsersController::class, 'getPosts']);
+Route::get('/get_comments/{user_id}/{post_id}', [UsersController::class, 'getComments']);
