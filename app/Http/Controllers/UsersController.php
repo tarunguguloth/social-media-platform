@@ -60,5 +60,13 @@ class UsersController extends Controller
             'comments'=>$comments,
         ]);
     }
+    public function getUsers(): JsonResponse
+    {
+        $users = DB::table('users')->get();
+        return response()->json([
+            'users'=>$users,
+        ]);
+
+    }
 
 }

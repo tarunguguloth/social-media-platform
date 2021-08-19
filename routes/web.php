@@ -24,3 +24,4 @@ Route::post('/create_post/{user_id}',[UsersController::class, 'createPost']);
 Route::post('/write_comment/{user_id}/{post_id}',[UsersController::class, 'writeComment']);
 Route::get('/get_posts/{user_id}', [UsersController::class, 'getPosts']);
 Route::get('/get_comments/{user_id}/{post_id}', [UsersController::class, 'getComments']);
+Route::get('/get_users', [UsersController::class, 'getUsers']);

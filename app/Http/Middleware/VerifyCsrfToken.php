@@ -16,6 +16,8 @@ class VerifyCsrfToken extends Middleware
         'http://localhost:8000/create_post/*',
         'http://localhost:8000/write_comment/*',
         'http://localhost:8000/get_posts/*',
-        'http://localhost:8000/get_comments/*'
+        'http://localhost:8000/get_comments/*',
+        'http://localhost:8000/get_users',
+
     ];
 }
