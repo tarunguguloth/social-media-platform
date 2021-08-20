@@ -21,7 +21,7 @@ class UsersController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'name' => 'required|max:255',
-            'email' => 'required',
+            'email' => 'required|unique:users',
         ]);
         if ($validator->fails()) {
             return response()->json($validator->errors(),Response::HTTP_BAD_REQUEST);
