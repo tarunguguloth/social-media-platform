@@ -95,5 +95,25 @@ class UsersController extends Controller
         ]);
 
     }
-
+    public function deleteUser(int $user_id): JsonResponse
+    {
+        $this->userService->deleteUser($user_id);
+        return response()->json([
+            'message'=>"User deleted successfully",
+        ]);
+    }
+    public function deletePost(int $post_id): JsonResponse
+    {
+        $this->userService->deletePost($post_id);
+        return response()->json([
+            'message'=>"Post deleted successfully",
+        ]);
+    }
+    public function deleteComment(int $comment_id): JsonResponse
+    {
+        $this->userService->deleteComment($comment_id);
+        return response()->json([
+            'message'=>"Comment deleted successfully",
+        ]);
+    }
 }

@@ -25,3 +25,6 @@ Route::post('/write_comment/{user_id}/{post_id}',[UsersController::class, 'write
 Route::get('/get_posts/{user_id}', [UsersController::class, 'getPosts']);
 Route::get('/get_comments/{user_id}/{post_id}', [UsersController::class, 'getComments']);
 Route::get('/get_users', [UsersController::class, 'getUsers']);
+Route::delete('/delete_user/{user_id}', [UsersController::class, 'deleteUser']);
+Route::delete('/delete_post/{user_id}/{post_id}', [UsersController::class, 'deletePost']);
+Route::delete('/delete_comment/{user_id}/{post_id}/{comment_id}', [UsersController::class, 'deleteComment']);
